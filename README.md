@@ -1,104 +1,17 @@
-# Online Retail Sales Analysis Dashboard (Power BI)
+# UK Online Retail Sales Analysis | Power BI Dashboard
 
-## Project Overview
-This project is an end-to-end Power BI dashboard built using a UK-based online retail dataset. The goal of the project is to analyze business performance, product trends, and customer behavior to derive meaningful insights for decision-making.
-
-
-## Objectives
-- Analyze overall sales performance
-- Identify top-performing products
-- Understand customer behavior and retention
-- Segment customers using RFM analysis
+> **Business Question:** Which customer segments are driving revenue — and which are at risk of being lost?
 
 
-## Data Cleaning & Preparation
-Performed in Power Query:
-- Removed cancelled transactions (Invoice starting with 'C')
-- Handled missing values
-- Converted data types (especially date fields)
-- Created a *Revenue column* (Quantity × Unit Price)
-- Filtered dataset for *Dec 2010 – Nov 2011*
-- Created a *Date Table* for time-based analysis
+
+##  The Problem
+
+A UK-based online retailer had over 500,000 transactions but no clear view of *who* their most valuable customers were, *what* products were actually profitable, and *when* revenue was likely to peak or drop. This dashboard was built to answer those questions and give the business a foundation for smarter retention and stocking decisions.
 
 
-## Data Modeling
-- Created a *Fact Table (fact_sales)*
-- Built relationships between:
-  - Date Table → fact_sales (Invoice Date)
-- Implemented star schema approach
+## 📊 Dashboard Preview
 
-
-## Key Metrics (DAX Measures)
-- Total Revenue
-- Total Orders
-- Total Customers
-- Average Order Value (AOV)
-- Repeat Customers %
-- Customer-level metrics (Recency, Frequency, Monetary)
-
-
-## Dashboard Pages
-
-### 1. Overview
-- KPI Cards: Revenue, Orders, Customers, AOV
-- Monthly Revenue Trend
-- Revenue by Country
-- Order Trend
-
-*Key Insight:*
-- Revenue peaks during Q4, indicating strong seasonality
-- Majority revenue comes from the UK
-
-
-### 2. Product Analysis
-- Top Products by Revenue
-- Top Products by Quantity
-- Product Performance Table
-
-*Key Insight:*
-- A small number of products contribute significantly to total revenue
-- High-volume products are not always high-revenue products
-
-
-### 3. Customer Analysis
-- Customer Growth Trend
-- Repeat vs One-time Customers
-- Revenue Contribution by Customer Type
-- Top Customers by Revenue
-
-*Key Insight:*
-- ~66% customers are repeat buyers
-- Repeat customers contribute ~90% of total revenue
-
-
-### 4. RFM Analysis
-- Customer segmentation based on:
-  - Recency
-  - Frequency
-  - Monetary value
-- Distribution charts for each metric
-- Customer Segmentation (Champions, Loyal, At Risk, etc.)
-
-*Key Insight:*
-- Majority customers are low-value or one-time buyers
-- Small segment of high-value customers drives major revenue
-
-
-##  Business Insights
-- Strong dependency on repeat customers
-- Seasonal spike in sales during year-end
-- Revenue concentration among top products and customers
-- Opportunity to improve retention of one-time customers
-
-
-##  Tools & Technologies
-- Power BI
-- Power Query
-- DAX (Data Analysis Expressions)
-
-
-##  Dashboard Preview
-### Overview Page
+### Overview
 <img width="889" height="495" alt="overview correct" src="https://github.com/user-attachments/assets/8d6cf632-6d89-4d02-af0e-27aa14b69905" />
 
 ### Product Analysis
@@ -107,13 +20,70 @@ Performed in Power Query:
 ### Customer Analysis
 <img width="893" height="496" alt="Customer Analysis" src="https://github.com/user-attachments/assets/1a66f2ef-a438-42e3-bd92-e79add4b5c17" />
 
-### RFM Analysis
+### RFM Segmentation
 <img width="887" height="490" alt="RFM Analysis" src="https://github.com/user-attachments/assets/bb152e7b-e4a0-48d9-afa3-ae82828c9059" />
 
 
-##  Conclusion
-This project demonstrates the ability to transform raw data into actionable insights using Power BI. It highlights key business trends and provides a foundation for data-driven decision-making.
+##  Key Business Findings
 
+**1. Repeat customers are the entire business.**
+~66% of customers are repeat buyers, and they contribute approximately **90% of total revenue**. One-time buyers are nearly irrelevant to the bottom line — but represent a large untapped retention opportunity.
+
+**2. Revenue is dangerously seasonal.**
+Sales spike sharply in Q4 (Oct–Nov), then drop. A business that doesn't plan inventory and marketing around this pattern will either overstock or miss demand entirely.
+
+**3. A small number of products carry disproportionate revenue.**
+The top-performing products by revenue are not the same as the top products by volume. High-selling items can be low-margin traps.
+
+**4. Most customers are low-value or one-time.**
+RFM segmentation reveals that while "Champion" customers are the most profitable, they are a small minority. The "At Risk" segment — customers who were once loyal but haven't purchased recently — is the highest-value retention target.
+
+
+
+##  Business Recommendations
+
+1. **Prioritise "At Risk" customer reactivation.** These customers have high historical spend but declining recency. A targeted campaign (discount, personalised outreach) directed at this segment would have higher ROI than acquiring new one-time buyers.
+
+2. **Build a Q4 inventory plan.** Revenue concentration in Oct–Nov means stockouts or overstock errors are most costly in this window. The revenue trend data here can directly inform procurement timing.
+
+3. **Audit low-volume, high-revenue products.** These are undermarketed. 
+
+
+
+##  Tools & Techniques
+
+| Tool | Purpose |
+|---|---|
+| Power BI | Dashboard design, interactive visuals |
+| Power Query | Data cleaning, removing cancelled orders, type conversion |
+| DAX | Custom measures (AOV, Repeat Customer %, RFM scoring) |
+| Star Schema | Fact table + Date table relationship modelling |
+
+---
+
+## 📁 Data Cleaning Steps
+
+- Removed all cancelled transactions (Invoice IDs starting with 'C')
+- Handled null CustomerIDs and blank descriptions
+- Converted InvoiceDate to proper datetime format
+- Created calculated Revenue column: `Quantity × UnitPrice`
+- Filtered to Dec 2010 – Nov 2011 for consistent annual view
+- Built a Date Table for time-intelligence functions
+
+---
+
+##  Files in This Repo
+
+| File | Description |
+|---|---|
+| `PowerBI_Sales_Dashboard.pbix` | Full Power BI file (open in Power BI Desktop) |
+| `PowerBI_Sales_Dashboard.pdf` | Static preview of all dashboard pages |
+| `README.md` | This file |
+
+---
 
 ##  Author
-Shruti Doshi
+
+**Shruti Doshi** — Data Analyst  
+[LinkedIn](https://www.linkedin.com/in/shruti-doshi-661a443b8) · [GitHub](https://github.com/Shruti-doshi21)
+
