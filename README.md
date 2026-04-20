@@ -14,14 +14,18 @@ A UK-based online retailer had over 500,000 transactions but no clear view of *w
 ### Overview
 <img width="889" height="495" alt="overview correct" src="https://github.com/user-attachments/assets/8d6cf632-6d89-4d02-af0e-27aa14b69905" />
 
+
 ### Product Analysis
 <img width="890" height="494" alt="product analysis" src="https://github.com/user-attachments/assets/ae32553f-10ae-4ae6-9f6a-88007ec88b98" />
+
 
 ### Customer Analysis
 <img width="893" height="496" alt="Customer Analysis" src="https://github.com/user-attachments/assets/1a66f2ef-a438-42e3-bd92-e79add4b5c17" />
 
+
 ### RFM Segmentation
 <img width="887" height="490" alt="RFM Analysis" src="https://github.com/user-attachments/assets/bb152e7b-e4a0-48d9-afa3-ae82828c9059" />
+
 
 
 ##  Key Business Findings
